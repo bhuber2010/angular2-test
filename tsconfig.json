@@ -30,5 +30,8 @@
     "./app/**/*.ts",
     "./tsd_typings/**/*.ts"
   ],
-  "compileOnSave": false
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }

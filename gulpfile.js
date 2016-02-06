@@ -15,12 +15,7 @@ var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
 var insert = require('gulp-insert');
 
-
-    var sass = require('gulp-sass');
-
-
-
-
+var sass = require('gulp-sass');
 
 var Builder = require('systemjs-builder');
 var del = require('del');
@@ -164,15 +159,15 @@ gulp.task('build.js.dev', function () {
 
 gulp.task('build.assets.dev', [
     'build.js.dev'
-    
+
 ], function () {
 
-    
+
         gulp.src(['./app/**/*.sass', './app/**/*.scss'])
             .pipe(sass().on('error', sass.logError))
             .pipe(gulp.dest(PATH.dest.dev.all));
 
-    
+
 
 
 
@@ -253,14 +248,14 @@ gulp.task('build.init.prod', function () {
 
 gulp.task('build.assets.prod', [
     'build.js.prod'
-    
+
 ], function () {
-    
+
         gulp.src(['./app/**/*.sass', './app/**/*.scss'])
             .pipe(sass().on('error', sass.logError))
             .pipe(gulp.dest(PATH.dest.dev.all));
 
-    
+
 
     var filterHTML = filter('**/*.html');
     var filterCSS = filter('**/*.css');
