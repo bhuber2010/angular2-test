@@ -28,7 +28,8 @@
   ],
   "filesGlob": [
     "./app/**/*.ts",
-    "./tsd_typings/**/*.ts"
+    "./tsd_typings/**/*.ts",
+    "!./node_modules/**/*.ts"
   ],
   "compileOnSave": false,
   "atom": {

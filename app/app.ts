@@ -11,8 +11,16 @@ import {NamesList} from './services/NameList';
     viewBindings: [NamesList]
 })
 @RouteConfig([
-    {path: '/', component: Home, as: 'home'},
-    {path: '/about', component: About, as: 'about'}
+    {
+      path: '/',
+      component: Home,
+      as: 'home'
+    },
+    {
+      path: '/about',
+      component: About,
+      as: 'about'
+    }
 ])
 @View({
     templateUrl: './app.html',
